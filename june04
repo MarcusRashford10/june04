@@ -1,0 +1,89 @@
+
+#팩토리얼 특징 설명해주기
+
+#10872 - for문
+# n = int(input())
+# anw = 1
+# if n > 0:
+#     for i in range(1, n+1):
+#         anw *= i
+# print(anw)
+
+#10870 - 함수
+# def factorial(n):
+#     result = 1  #0 팩토리얼 = 1
+#     if n > 0 :
+#         result = n * factorial(n-1)  # 5팩토리얼 = 5*4팩토리얼
+#     return result
+#
+# n = int(input())
+# print(factorial(n))
+#---------
+#피보나치 수열열
+#10870 - for 문
+# n = int(input())
+#
+# fibonacci = [0, 1]
+# for i in range(2, n+1):
+#     num = fibonacci[i-1] + fibonacci[i-2]
+#     fibonacci.append(num)
+# print(fibonacci[n])
+
+
+# def fibonacci(n):
+#     if n <= 1:
+#         return n
+#     return fibonacci(n-1) + fibonacci(n-2)
+#
+# n = int(input())
+# print(fibonacci(n))
+#---------------------------------------------------------
+#기하 알고리즘
+#1085
+# x, y, w, h = map(int, input().split())
+# print(min(x, y, w-x, h-y))
+
+#3009
+# x_nums = []
+# y_nums = []
+# for _ in range(3):
+#     x, y = map(int, input().split())
+#     x_nums.append(x)
+#     y_nums.append(y)
+# for i in range(3):
+#     if x_nums.count(x_nums[i]) == 1:
+#         x4 = x_nums[i]
+#     if y_nums.count(y_nums[i]) == 1:
+#         y4 = y_nums[i]
+# print(x4, y4)
+
+#4153
+# while True:
+#         a = list(map(int, input().split()))
+#         max_num = max(a)
+#         if sum(a) == 0:
+#                 break
+#         a.remove(max_num)
+#         if a[0] ** 2 + a[1] ** 2 == max_num ** 2:
+#                 print('right')
+#         else:
+#                 print('wrong')
+
+#재귀 알고리즘
+#재귀 가능한 깊이까지만 파고 에러
+# def hello():
+#     print('Hello, world!')
+#     hello()
+#
+# hello()
+
+# def hello(count):
+#     if count == 0:  # 종료 조건을 만듦. count가 0이면 다시 hello 함수를 호출하지 않고 끝냄
+#         return
+#
+#     print('Hello, world!', count)
+#
+#     count -= 1  # count를 1 감소시킨 뒤
+#     hello(count)  # 다시 hello에 넣음
+#
+# hello(5)
